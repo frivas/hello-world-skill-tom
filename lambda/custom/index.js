@@ -39,7 +39,7 @@ const HelloWorldIntentHandler = {
   async handle(handlerInput) {
   const response = await graphQLClient.request(helloWorldQuery);
 
-  const speechText = `The movvie Inception is starred by ${response.Movie.actors[0].name}`;
+  const speechText = `The movie Inception is starred by ${response.Movie.actors[0].name}`;
   console.log('Query Result = ' + JSON.stringify(response, null, 2))
 
     return handlerInput.responseBuilder
